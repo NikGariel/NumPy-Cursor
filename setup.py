@@ -22,5 +22,7 @@ setup(
   ],
   keywords='numpy python cursor matrix',
   project_urls={},
-  python_requires='>=3.8'
+  python_requires='>=3.8',
+  py_modules=["numpy_cursor"],             # Name of the python package
+  package_dir={'':'numpy_cursor'},
 )
