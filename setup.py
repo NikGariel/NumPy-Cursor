@@ -5,7 +5,7 @@ def readme():
     return f.read()
 
 setup(
-  name='NumPy-Cursor',
+  name='numpy_cursor',
   version='1.0.0',
   author='nikgariel',
   author_email='nikgariel@yahoo.com',
