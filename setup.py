@@ -17,7 +17,7 @@ setup(
   install_requires=[],
   classifiers=[
     'Programming Language :: Python :: 3.8',
-    'License :: OSI Approved ::  Apache License, Version 2.0 (Apache-2.0)',
+    'License :: OSI Approved :: Apache Software License',
     'Operating System :: OS Independent'
   ],
   keywords='numpy python cursor matrix',
