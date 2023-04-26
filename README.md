@@ -11,8 +11,10 @@ The cursor class has the following methods:
 *   `up(self, steps=1)`: Moves the cursor up by `steps` rows.
 *   `down(self, steps=1)`: Moves the cursor down by `steps` rows.
 *   `move(self, row_steps, col_steps)`: Moves the cursor by `row_steps` rows and `col_steps` columns.
+*   `set(self, row, col)`: Set the cursor by `row` rows and `col` columns.
 *   `coordinates`: Returns the current row and column coordinates of the cursor.
 *   `isEmpty`: Returns `True` if the value of the matrix at the current cursor position is zero, and `False` otherwise.
+*   `setItem(self, item)`: Setting the value of the cursor cell by `item`.
 *   `__repr__(self)`: Returns a string representation of the value of the matrix at the current cursor position.
 *   `__str__(self)`: Returns a string representation of the value of the matrix at the current cursor position.
 

@@ -62,6 +62,22 @@ class Cursor:
         self.col = new_col
         return str(self.matrix[self.row, self.col])
 
+    def setItem(self, item) -> str:
+        self.matrix[self.row, self.col] = item
+        return str(self.matrix[self.row, self.col])
+
+    def set(self, row: int, col: int) -> str:
+        if row < 0:
+            raise ValueError(f"Cursor set row must be > -1, but obtained {row}")
+        if col < 0:
+            raise ValueError(f"Cursor set row must be > -1, but obtained {row}")
+        if row > self.shape[0] or col > self.shape[1]:
+            raise ValueError(
+                f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0]},{self.shape[1]}), but the cursor tried to set to ({row},{col})")
+        self.row = row
+        self.col = col
+        return str(self.matrix[self.row, self.col])
+
     @property
     def coordinates(self):
         return self.row, self.col

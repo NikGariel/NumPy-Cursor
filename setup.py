@@ -6,7 +6,7 @@ def readme():
 
 setup(
   name='numpy_cursor',
-  version='1.0.0',
+  version='1.0.2',
   author='nikgariel',
   author_email='nikgariel@yahoo.com',
   description='This package contains a Python implementation of a cursor for NumPy matrices. The cursor allows you to conveniently move through a matrix and read or modify its values.',
@@ -23,6 +23,6 @@ setup(
   keywords='numpy python cursor matrix',
   project_urls={},
   python_requires='>=3.8',
-  py_modules=["numpy_cursor"],             # Name of the python package
-  package_dir={'':'numpy_cursor'},
+  py_modules=["numpy_cursor"],
+  package_dir={'':'src'},
 )
