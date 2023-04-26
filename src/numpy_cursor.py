@@ -22,7 +22,7 @@ class Cursor:
         if steps < 1:
             raise ValueError(f"Cursor right step must be > 0, but obtained {steps}")
         new_col = self.col + steps
-        if new_col > self.shape[1]:
+        if new_col > self.shape[1] - 1:
             raise ValueError(
                 f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0] - 1},{self.shape[1] - 1}), but the cursor tried to go to ({self.row},{new_col})")
         self.col = new_col
@@ -42,7 +42,7 @@ class Cursor:
         if steps < 1:
             raise ValueError(f"Cursor down step must be > 0, but obtained {steps}")
         new_row = self.row + steps
-        if new_row > self.shape[0]:
+        if new_row > self.shape[0] - 1:
             raise ValueError(
                 f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0] - 1},{self.shape[1] - 1}), but the cursor tried to go to ({new_row},{self.col})")
         self.row = new_row
@@ -55,7 +55,7 @@ class Cursor:
             raise ValueError(f"Cursor move col step must be != 0, but obtained {col_steps}")
         new_row = self.row + row_steps
         new_col = self.col + col_steps
-        if new_row < 0 or new_row > self.shape[0] or new_col < 0 or new_col > self.shape[1]:
+        if new_row < 0 or new_row > self.shape[0] - 1 or new_col < 0 or new_col > self.shape[1] - 1:
             raise ValueError(
                 f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0] - 1},{self.shape[1] - 1}), but the cursor tried to go to ({new_row},{new_col})")
         self.row = new_row
@@ -71,7 +71,7 @@ class Cursor:
             raise ValueError(f"Cursor set row must be > -1, but obtained {row}")
         if col < 0:
             raise ValueError(f"Cursor set col must be > -1, but obtained {row}")
-        if row > self.shape[0] or col > self.shape[1]:
+        if row > self.shape[0] - 1 or col > self.shape[1] - 1:
             raise ValueError(
                 f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0] - 1},{self.shape[1] - 1}), but the cursor tried to set to ({row},{col})")
         self.row = row
