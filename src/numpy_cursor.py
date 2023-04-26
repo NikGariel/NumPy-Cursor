@@ -70,7 +70,7 @@ class Cursor:
         if row < 0:
             raise ValueError(f"Cursor set row must be > -1, but obtained {row}")
         if col < 0:
-            raise ValueError(f"Cursor set row must be > -1, but obtained {row}")
+            raise ValueError(f"Cursor set col must be > -1, but obtained {row}")
         if row > self.shape[0] or col > self.shape[1]:
             raise ValueError(
                 f"Cursor try to out of bounds matrix, matrix limits is (0,0) ({self.shape[0]},{self.shape[1]}), but the cursor tried to set to ({row},{col})")
